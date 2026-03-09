@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Écho du Code - IUT Info Arles</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <div id="cursor-dot" class="custom-cursor-dot"></div>
+    <div id="cursor-ring" class="custom-cursor-ring"></div>
+
+    <div class="journal-grid" id="journal-grid">
+        <header class="grid-item bandeau">
+            <div class="content-wrapper">
+                <span class="tech-label">Live_Feed //</span>
+                <span id="breaking-news" class="accent-text">Chargement des données...</span>
+            </div>
+        </header>
+
+        <div class="grid-item oreille-g">
+            <div class="content-wrapper">
+                <span class="tech-label">Météo_Locale</span>
+                <div class="info-block">
+                    <strong>Arles, FR</strong><br>
+                    <span>☁️ 16°C - Nuageux</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item manchette text-center">
+            <div class="content-wrapper">
+                <h1>L'Écho du Code</h1>
+                <p class="subtitle">IUT Informatique Arles</p>
+            </div>
+        </div>
+
+        <div class="grid-item oreille-d right-align">
+            <div class="content-wrapper">
+                <span class="tech-label">Édition_</span>
+                <div class="info-block">
+                    <strong>Vol. 404</strong><br>
+                    <span>18 Mars 2026</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item tribune text-center interactive" onclick="openModal(1)" style="cursor: pointer;">
+            <div class="content-wrapper">
+                <span class="tech-label" style="color: #ef4444; font-weight: bold;">/// BREAKING NEWS ///</span>
+                <h2>Riccardo a ENFIN eu son B1+ en français !</h2>
+                <p class="text-muted">Des hackers ont fait fuiter les données de son compte Duolingo. Cliquez ici pour lire l'enquête exclusive sur ce miracle.</p>
+            </div>
+        </div>
+
+        <aside class="grid-item sous-trib-g">
+            <div class="content-wrapper">
+                <span class="tech-label">Brèves_</span>
+                <ul class="clean-list">
+                    <li>Nouveau record : 3 jours sans panne Wifi</li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="grid-item sous-trib-c flex-center text-center">
+            <div class="content-wrapper">
+                <h3>Les soutenances de projets sont pour le 18. Préparez vos diapos.</h3>
+            </div>
+        </div>
+
+        <main class="grid-item ventre">
+            <div class="content-wrapper">
+                <div class="articles-container">
+                    
+                    <article class="inner-card interactive" onclick="openModal(1)">
+                        <img src="https://via.placeholder.com/400x200/151922/38bdf8?text=Duolingo+Leak" alt="Illustration Duolingo" class="article-img">
+                        <div class="article-content">
+                            <span class="tech-label">SCOOP</span>
+                            <h4>Riccardo obtient ENFIN son niveau B1 en français</h4>
+                            <p>Comme nous le savons tous, son niveau laissait à désirer, mais un hacker a fait fuiter des données Duolingo prouvant qu'il a eu son B1+.</p>
+                        </div>
+                    </article>
+
+                    <article class="inner-card interactive" onclick="openModal(2)">
+                        <img src="https://via.placeholder.com/400x200/151922/38bdf8?text=Objection!" alt="Illustration Droit" class="article-img">
+                        <div class="article-content">
+                            <span class="tech-label">Droit</span>
+                            <h4>M. Chikhaoui perd un procès !</h4>
+                            <p>Un procureur corrompu a fait fuiter l'info : le prof aurait perdu contre un 1ère année.</p>
+                        </div>
+                    </article>
+
+                    <article class="inner-card interactive" onclick="openModal(3)">
+                        <img src="https://via.placeholder.com/400x200/151922/38bdf8?text=Grok+AI+Scandal" alt="Illustration IA" class="article-img">
+                        <div class="article-content">
+                            <span class="tech-label">IA</span>
+                            <h4>M. Rémy utilise l'IA ???</h4>
+                            <p>Le membre de l'association anti-IA pris la main dans le sac avec Grok Pro.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <aside class="grid-item sous-trib-d">
+            <div class="content-wrapper">
+                <span class="tech-label">Annonces_</span>
+                <ul class="clean-list">
+                    <li>Étudiant de 2ème année propose tutorat le lundi soir pour tous les élèves qui veulent prendre de l'avance.</li>
+                    <li>Recherche binôme projet Java. Compétence requise : faire 90% du code.</li>
+                </ul>
+            </div>
+        </aside>
+
+        <footer class="grid-item rez-de-chaussee flex-center flex-col">
+            <div class="content-wrapper text-center">
+                <p>IUT d'Arles - Département Informatique.</p>
+                <p class="tech-label" style="margin-top: 5px;">Rédaction organisée par Emmanuel et Pierre</p>
+            </div>
+        </footer>
+
+        <div class="grid-item cheval flex-center interactive">
+            <div class="content-wrapper">
+                <span class="tech-label">Continuer la lecture -></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="article-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="close-btn interactive" onclick="closeModal()">Fermer ✕</button>
+            <div id="modal-content" class="modal-content"></div>
+        </div>
+    </div>
+
+</body>
+</html>
